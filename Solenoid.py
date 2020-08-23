@@ -30,12 +30,14 @@ for ii2 in range(int(Sample_n)):
     FreeCAD.getDocument("Solenoid").getObject("Helix001").Pitch = ii
     FreeCAD.getDocument("Solenoid").getObject("Helix001").Height = i
     displacement = i-a
-    FreeCAD.getDocument("Solenoid").getObject("Cut001").Placement.Base.z = displacement
+    FreeCAD.getDocument("Solenoid").getObject("Fusion009").Placement.Base.z = displacement
     App.getDocument("Solenoid").Cut002.Placement=App.Placement(App.Vector(0,0,displacement),
                                                                   App.Rotation(App.Vector(0,0,1),ii2*10), App.Vector(0,0,0))
-    App.getDocument("Solenoid").Extrude001.Placement=App.Placement(App.Vector(0,0,0),
+    App.getDocument("Solenoid").Fusion010.Placement=App.Placement(App.Vector(0,0,0),
                                                                   App.Rotation(App.Vector(0,0,1),ii2*10), App.Vector(0,0,0))
-	
+    App.getDocument("Solenoid").Cut011.Placement=App.Placement(App.Vector(0,0,0),
+                                                                  App.Rotation(App.Vector(0,0,1),ii2*10), App.Vector(0,0,0))
+
     App.Console.PrintMessage("SimTime [sec]: "+str(round(ii2*Sample_t,2))+"  Plunger displacement [mm]: " + str(displacement)+"\n")
     Gui.updateGui()
     time.sleep(Sample_t)	
