@@ -1,7 +1,12 @@
 # eAxleDisconnectSystem
-FreeCAD macro to simulate the connection/disconnection cycle of an e-axle coupling system
+FreeCAD macro to a animate the connection/disconnection cycle of an e-axle solenoid-actuated coupling system (concentric design).
+Input and output demo shafts included
 
-![](/Video/GIF.gif)
+![](/Video/GIF_N.gif)
+
+![](/Video/GIF_L.gif)
+
+![](/Video/GIF_P.gif)
 
 
 # Usage
